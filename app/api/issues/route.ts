@@ -1,7 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from 'zod';
 import prisma from "@/prisma/client";
-import { Status } from "@prisma/client";
+
+/**
+ * @swagger
+ * /api/issues:
+ *   Post:
+ *     description: create new issue
+ *     responses:
+ *       200:
+ *         description: hello world
+ */
 
 const createIssueSchema = z.object({
     title: z.string().min(1).max(255),
