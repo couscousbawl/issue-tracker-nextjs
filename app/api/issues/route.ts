@@ -12,7 +12,7 @@ const createIssueSchema = z.object({
  * @swagger
  * components:
  *   schemas:
- *     issue:
+ *     Issue:
  *       type: object
  *       required: title
  *       properties:
@@ -45,14 +45,14 @@ const createIssueSchema = z.object({
  *       content:
  *         application/json:
  *           schema:
- *             $ref: '#/components/schemas/issue'
+ *             $ref: '#/components/schemas/Issue'
  *     responses:
  *       200:
  *         description: The issue was successfully created
  *         content:
  *           application/json:
  *             schema:
- *               $ref: '#/components/schemas/issue'
+ *               $ref: '#/components/schemas/Issue'
  *       400:
  *         description: Some server error
  */
