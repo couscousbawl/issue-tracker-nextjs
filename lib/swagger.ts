@@ -1,9 +1,10 @@
 import { createSwaggerSpec } from 'next-swagger-doc';
 
+import "server-only"
+
 export const getApiDocs = async () => {
   const spec = createSwaggerSpec({
     apiFolder: 'app/api', // define api folder under app folder
-    servers: [{ url: "http://localhost:3000", }],
     definition: {
       openapi: '3.0.0',
       info: {
