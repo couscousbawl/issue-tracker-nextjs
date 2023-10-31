@@ -63,12 +63,11 @@ export async function POST(request: NextRequest){
     
     try {
         if(!validation.success){
-            return NextResponse.json(validation.error.errors, {status: 400});
+            return NextResponse.json(validation.error.format(), {status: 400});
         }
         const newIssue = await prisma.issue.create({
             data: { title: body.title, description: body.description }
         });
-        console.log(newIssue);
         return NextResponse.json(newIssue, {status: 200});
     } catch (error) {
         NextResponse.json({ error: error }, {status: 500}, );
