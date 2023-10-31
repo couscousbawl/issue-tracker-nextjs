@@ -32,7 +32,7 @@ import { createIssueSchema } from "../../validationSchema";
 
  /**
  * @swagger
- * /issues:
+ * /api/issues:
  *   post:
  *     summary: Create a new issue
  *     tags: [Issue]
